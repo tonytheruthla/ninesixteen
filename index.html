@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nine Sixteen — 916</title>
+<meta name="description" content="A meme coin launched the day Arc mainnet opened. 16 September 2026. Holders of record are paid in USDC from trading fees.">
+<link rel="icon" type="image/png" href="/916-logo-512.png">
+<meta property="og:title" content="Nine Sixteen — 916">
+<meta property="og:description" content="A meme coin launched the day Arc mainnet opened. 16 September 2026.">
+<meta property="og:image" content="https://ninesixteen.xyz/916-og.png">
+<meta property="og:url" content="https://ninesixteen.xyz/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Nine Sixteen — 916">
+<meta name="twitter:description" content="A meme coin launched the day Arc mainnet opened. 16 September 2026.">
+<meta name="twitter:image" content="https://ninesixteen.xyz/916-og.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<style>
+:root{
+  --paper:#EEF1F5; --paper2:#F7F9FB; --ink:#111820; --muted:#5B6875;
+  --rule:#C6D0DA; --rule-soft:#DCE3EA; --blue:#1B45C4; --red:#C33D31;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --paper:#0C1116; --paper2:#141C24; --ink:#E6ECF2; --muted:#93A2B1;
+         --rule:#2C3945; --rule-soft:#1E2831; --blue:#7EA2FF; --red:#F0776A; }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--ink);font-family:"Archivo",system-ui,-apple-system,sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:840px;margin:0 auto;padding:0 24px 90px}
+.mono{font-family:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace}
+
+header{border-bottom:3px solid var(--ink);padding:44px 0 18px;display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+.mark{font-weight:900;font-size:clamp(54px,13vw,86px);letter-spacing:-.055em;line-height:.8;display:flex;align-items:center;gap:.105em}
+.mark .sl{width:.076em;height:.85em;background:var(--red);transform:skewX(-16deg);flex:none;display:block}
+.meta{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);text-align:right;line-height:2.1}
+
+.lede{font-size:clamp(28px,5.4vw,44px);font-weight:500;letter-spacing:-.022em;line-height:1.25;margin:44px 0 0;max-width:20ch;text-wrap:balance}
+.sub{color:var(--muted);margin-top:18px;max-width:56ch}
+
+.clock{display:flex;gap:34px;flex-wrap:wrap;margin:38px 0 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:22px 0}
+.clock .u{min-width:74px}
+.clock .n{font-weight:900;font-size:44px;letter-spacing:-.045em;line-height:1;font-variant-numeric:tabular-nums}
+.clock .l{font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:8px}
+
+section{padding:44px 0;border-bottom:1px solid var(--rule-soft)}
+h2{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);font-weight:500;margin-bottom:18px}
+p{margin-bottom:14px;max-width:62ch}
+p:last-child{margin-bottom:0}
+
+.ca{border:3px solid var(--ink);background:var(--paper2);padding:26px 28px}
+.ca .k{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.ca .v{font-family:"JetBrains Mono",monospace;font-size:clamp(15px,3.6vw,26px);font-weight:700;word-break:break-all;line-height:1.4}
+.ca .v.pending{color:var(--muted);font-weight:500}
+.ca .row{display:flex;gap:12px;align-items:center;margin-top:18px;flex-wrap:wrap}
+button{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;background:none;border:1px solid var(--rule);color:var(--ink);padding:8px 14px;cursor:pointer}
+button:hover:not(:disabled){border-color:var(--blue);color:var(--blue)}
+button:disabled{color:var(--muted);cursor:default}
+.warn{font-family:"JetBrains Mono",monospace;font-size:12px;letter-spacing:.1em;color:var(--red);margin-top:20px;line-height:1.8;text-transform:uppercase}
+
+table{border-collapse:collapse;width:100%;font-size:15px}
+td{padding:14px 14px 14px 0;border-bottom:1px solid var(--rule-soft);vertical-align:top}
+td.k{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);width:42%;white-space:nowrap}
+td.v{font-family:"JetBrains Mono",monospace;font-size:14px;font-variant-numeric:tabular-nums}
+.tw{overflow-x:auto}
+
+ul{list-style:none;max-width:62ch}
+li{position:relative;padding-left:22px;margin-bottom:10px}
+li::before{content:"";position:absolute;left:2px;top:.72em;width:8px;height:1px;background:var(--rule)}
+
+.links{display:flex;gap:12px;flex-wrap:wrap;margin-top:4px}
+.links a{font-family:"JetBrains Mono",monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink);text-decoration:none;border:1px solid var(--rule);padding:11px 18px}
+.links a:hover{border-color:var(--blue);color:var(--blue)}
+.links a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+
+.stamp{display:inline-block;font-family:"JetBrains Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--red);border:2px solid var(--red);padding:8px 15px;transform:rotate(-2.5deg);margin-top:8px}
+
+footer{padding:36px 0 0;font-family:"JetBrains Mono",monospace;font-size:11.5px;line-height:2;letter-spacing:.03em;color:var(--muted);max-width:74ch}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="mark"><span>9</span><span class="sl"></span><span>16</span></div>
+  <div class="meta">Nine Sixteen · 916<br>Arc mainnet</div>
+</header>
+
+<h1 class="lede">A meme coin launched the day Arc mainnet opened.</h1>
+<p class="sub">Circle built Arc for tokenised treasuries and institutional settlement. Gas is paid in USDC. This is the other thing that happened on it.</p>
+
+<div class="clock" id="clock" aria-label="Time until launch">
+  <div class="u"><div class="n" id="d">—</div><div class="l">Days</div></div>
+  <div class="u"><div class="n" id="h">—</div><div class="l">Hours</div></div>
+  <div class="u"><div class="n" id="m">—</div><div class="l">Minutes</div></div>
+  <div class="u"><div class="n" id="s">—</div><div class="l">Seconds</div></div>
+</div>
+
+<section>
+  <h2>Notice of contract</h2>
+  <div class="ca">
+    <div class="k">Contract address · Arc mainnet</div>
+    <div class="v pending" id="cav">Not yet deployed · 16 SEP 2026</div>
+    <div class="row"><button id="copy" disabled>Copy</button></div>
+  </div>
+  <div class="warn">One address. Published here and on the pinned post. Every other one is a fake.</div>
+</section>
+
+<section>
+  <h2>Particulars</h2>
+  <div class="tw"><table>
+    <tr><td class="k">Name</td><td class="v">Nine Sixteen</td></tr>
+    <tr><td class="k">Ticker</td><td class="v">916</td></tr>
+    <tr><td class="k">Chain</td><td class="v">Arc mainnet</td></tr>
+    <tr><td class="k">Venue</td><td class="v">RadarDEX · USDC pair</td></tr>
+    <tr><td class="k">Starting supply</td><td class="v">916,000,000</td></tr>
+    <tr><td class="k">Supply direction</td><td class="v">Down. The token side of every fee burns.</td></tr>
+    <tr><td class="k">Deployer holding</td><td class="v">4% · wallet published · locked to 16 SEP 2027</td></tr>
+    <tr><td class="k">Liquidity</td><td class="v">Locked. No withdraw path.</td></tr>
+    <tr><td class="k">Contract</td><td class="v">No owner. No mint. No tax.</td></tr>
+    <tr><td class="k">Presale</td><td class="v">None.</td></tr>
+  </table></div>
+</section>
+
+<section>
+  <h2>The distribution</h2>
+  <p>Every trade pays a 1% fee. The USDC half of that fee splits between holders of record and the deployer. The token half is burned.</p>
+  <p>So the supply shrinks and holders are paid in dollars, by people trading. That is the whole mechanism. There is nothing else under it.</p>
+  <p><strong>No amount is promised. No amount is projected.</strong> Distributions rise and fall with volume, and volume can go to zero.</p>
+</section>
+
+<section>
+  <h2>The rules</h2>
+  <ul>
+    <li>No presale, and no allocation handed to anyone.</li>
+    <li>The deployer bought 4% in the launch transaction, said so a day early, published the wallet, and cannot sell before 16 September 2027.</li>
+    <li>Liquidity is locked in a contract with no withdraw path, for anyone, including us.</li>
+    <li>The contract has no owner and cannot mint. Nobody can change it, including us.</li>
+    <li>There is no roadmap. There is a date.</li>
+  </ul>
+  <span class="stamp">Not an investment</span>
+</section>
+
+<section>
+  <h2>Elsewhere</h2>
+  <div class="links">
+    <a href="https://x.com/" rel="noopener">X</a>
+    <a href="https://t.me/" rel="noopener">Telegram</a>
+    <a href="https://radardex.pro/" rel="noopener">Chart</a>
+  </div>
+</section>
+
+<footer>
+  Nine Sixteen is a meme coin. It has no intrinsic value, no utility, no team beyond the wallet named above, and no expectation of financial return. Buying it is not an investment and nothing on this page is investment, legal or tax advice. You can lose everything you put in.<br><br>
+  Not affiliated with, endorsed by, or connected to Circle, Arc, RadarDEX, or any validator. Uses none of their trademarks. Verify every claim on this page against the chain before you act on it.
+</footer>
+
+</div>
+<script>
+(function(){
+  var target = Date.UTC(2026, 8, 16, 0, 0, 0);
+  var el = { d:document.getElementById('d'), h:document.getElementById('h'),
+             m:document.getElementById('m'), s:document.getElementById('s') };
+  function pad(n){ return n < 10 ? '0' + n : '' + n; }
+  function tick(){
+    var diff = target - Date.now();
+    if(diff <= 0){
+      document.getElementById('clock').innerHTML =
+        '<div class="u" style="min-width:auto"><div class="n">LIVE</div><div class="l">Arc mainnet · 16 SEP 2026</div></div>';
+      return;
+    }
+    var t = Math.floor(diff/1000);
+    el.d.textContent = Math.floor(t/86400);
+    el.h.textContent = pad(Math.floor(t/3600)%24);
+    el.m.textContent = pad(Math.floor(t/60)%60);
+    el.s.textContent = pad(t%60);
+  }
+  tick(); setInterval(tick, 1000);
+
+  var btn = document.getElementById('copy');
+  btn.addEventListener('click', function(){
+    var v = document.getElementById('cav').textContent.trim();
+    if(!navigator.clipboard) return;
+    navigator.clipboard.writeText(v).then(function(){
+      btn.textContent = 'Copied';
+      setTimeout(function(){ btn.textContent = 'Copy'; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>
