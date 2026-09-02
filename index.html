@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Arc Day — September the 16th</title>
-<meta name="description" content="Arc Day, September the 16th. The day Circle's chain opens and 916 goes live on it. Zero team allocation. Holders of record paid in USDC from trading fees. THE AUDIT arriving after launch.">
+<meta name="description" content="Arc Day, September the 16th. The day Circle's chain opens and 916 goes live on it. Zero team allocation. Holders of record paid in USDC from trading fees. BUST arriving after launch.">
 <link rel="icon" type="image/png" href="/916-logo-512.png">
 <meta property="og:title" content="Arc Day — September the 16th">
 <meta property="og:description" content="The chain opens once. The date comes back every year.">
@@ -104,7 +104,7 @@ h2 em{font-style:normal;color:var(--blue2)}
 .mq .t span b{color:var(--blue2);font-weight:400}
 @keyframes sc{to{transform:translateX(-50%)}}
 
-/* ===== THE AUDIT ===== */
+/* ===== BUST ===== */
 .badge{display:inline-flex;align-items:center;gap:9px;font-family:var(--fm);font-size:10px;letter-spacing:.2em;text-transform:uppercase;
   color:var(--blue2);border:1px solid var(--blue);padding:7px 13px;margin-bottom:20px}
 .badge i{width:6px;height:6px;background:var(--blue);border-radius:50%;animation:blip 1.6s ease-in-out infinite;font-style:normal}
@@ -140,6 +140,86 @@ h2 em{font-style:normal;color:var(--blue2)}
 .p2ec .ic{font-family:var(--fm);font-size:10px;letter-spacing:.2em;color:var(--blue2);margin-bottom:14px}
 .p2ec h4{font-weight:700;font-size:1.08rem;letter-spacing:-.02em;margin-bottom:8px}
 .p2ec p{color:var(--muted);font-size:.93rem}
+
+
+/* ===== BUST — key art ===== */
+.keyart{position:relative;margin-top:38px;border:1px solid var(--line2);background:#04070A;overflow:hidden;
+  min-height:474px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:48px 20px 0}
+.keyart .floor{position:absolute;left:50%;bottom:-96px;transform:translateX(-50%);width:130%;height:330px;
+  background:radial-gradient(ellipse 46% 50% at 50% 50%,rgba(46,107,255,.55),rgba(46,107,255,.20) 42%,rgba(46,107,255,.05) 62%,transparent 76%);pointer-events:none}
+.keyart .gear{position:absolute;top:18px;right:18px;width:30px;height:30px;opacity:.5}
+.keyart .gear:hover{opacity:1}
+.keyart h3.bust{position:relative;z-index:2;font-weight:900;font-size:clamp(3.6rem,13vw,8.4rem);letter-spacing:.02em;line-height:.86;
+  color:#EAF2FF;text-shadow:0 0 34px rgba(46,107,255,.75),0 0 90px rgba(46,107,255,.4);margin:0}
+.keyart .subline{position:relative;z-index:2;font-family:var(--fm);font-size:clamp(11px,2.1vw,16px);letter-spacing:.07em;
+  color:#D7E3F5;margin-top:14px;text-align:center}
+.keyart .subline b{color:var(--amber);font-weight:700}
+.keyart .tagline{position:relative;z-index:2;font-family:var(--fm);font-weight:700;font-size:clamp(12px,2.4vw,19px);
+  letter-spacing:.16em;color:var(--blue2);margin-top:10px;text-shadow:0 0 22px rgba(46,107,255,.65);text-align:center}
+.lineup{position:relative;z-index:2;display:flex;align-items:flex-end;justify-content:center;gap:0;margin:auto auto 0;width:100%;max-width:1000px}
+.lineup .p{flex:0 0 auto;margin:0 -15px;animation:bob 3.4s ease-in-out infinite;filter:drop-shadow(0 10px 16px rgba(0,0,0,.75))}
+.lineup .p svg{display:block}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.keyart .shadow{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:70%;height:26px;
+  background:radial-gradient(ellipse 50% 50% at 50% 50%,rgba(0,0,0,.85),transparent 70%);z-index:1}
+
+/* ===== game console ===== */
+.console{margin-top:22px;border:1px solid var(--line2);background:var(--panel);overflow:hidden}
+.tabs{display:flex;border-bottom:1px solid var(--line2);background:var(--panel2);overflow-x:auto}
+.tabs button{flex:1 0 auto;font-family:var(--fm);font-size:10.5px;letter-spacing:.19em;text-transform:uppercase;
+  background:none;border:0;border-right:1px solid var(--line2);color:var(--muted);padding:16px 18px;cursor:pointer;position:relative;white-space:nowrap}
+.tabs button:last-child{border-right:0}
+.tabs button::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--blue);transform:scaleX(0);transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.tabs button:hover{color:var(--ink)}
+.tabs button[aria-selected="true"]{color:var(--blue2);background:var(--panel)}
+.tabs button[aria-selected="true"]::after{transform:none}
+.pane{display:none;padding:30px 28px;animation:fadein .4s ease}
+.pane[data-on]{display:block}
+@keyframes fadein{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+.slots{display:grid;grid-template-columns:repeat(auto-fit,minmax(112px,1fr));gap:12px}
+.slot{border:1px solid var(--line2);background:var(--panel2);padding:16px 10px 12px;text-align:center;position:relative;transition:border-color .3s,transform .3s}
+.slot:hover{border-color:var(--blue);transform:translateY(-4px)}
+.slot svg{width:40px;height:52px;display:block;margin:0 auto 9px}
+.slot .h{font-family:var(--fm);font-size:9.5px;letter-spacing:.14em;color:var(--ink)}
+.slot .st{font-family:var(--fm);font-size:8.5px;letter-spacing:.12em;color:var(--green);margin-top:5px}
+.slot.empty{border-style:dashed;opacity:.5}
+.slot.empty .st{color:var(--muted)}
+.lobbybar{display:flex;align-items:center;gap:16px;margin-top:22px;flex-wrap:wrap}
+.lobbybar .lb{font-family:var(--fm);font-size:10.5px;letter-spacing:.17em;text-transform:uppercase;color:var(--muted)}
+.meter{flex:1;min-width:160px;height:6px;background:var(--line2);position:relative;overflow:hidden}
+.meter i{position:absolute;inset:0;background:var(--blue);transform-origin:left;transform:scaleX(.8);animation:fillpulse 3.6s ease-in-out infinite}
+@keyframes fillpulse{0%,100%{transform:scaleX(.72)}50%{transform:scaleX(.92)}}
+
+.rolecards{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.rc{border:1px solid var(--line2);background:var(--panel2);padding:26px 24px}
+.rc.bad{border-color:var(--amber)}
+.rc .rh{display:flex;align-items:center;gap:14px;margin-bottom:16px}
+.rc .rh svg{width:44px;height:56px;flex:none}
+.rc .rt{font-family:var(--fm);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--blue2)}
+.rc.bad .rt{color:var(--amber)}
+.rc h4{font-weight:900;font-size:1.5rem;letter-spacing:-.03em;margin-top:3px}
+.rc ul{list-style:none;margin:0}
+.rc li{font-size:.93rem;color:var(--muted);padding:9px 0;border-bottom:1px solid var(--line);display:flex;gap:11px}
+.rc li:last-child{border:0}
+.rc li i{color:var(--blue2);font-style:normal;flex:none;font-family:var(--fm);font-size:11px}
+.rc.bad li i{color:var(--amber)}
+@media(max-width:720px){.rolecards{grid-template-columns:1fr}}
+
+.tasklist{display:grid;gap:10px;margin-top:6px}
+.tk{display:flex;align-items:center;gap:14px;border:1px solid var(--line2);background:var(--panel2);padding:14px 18px}
+.tk .box{width:15px;height:15px;border:1px solid var(--blue);flex:none;position:relative}
+.tk.done .box{background:var(--blue)}
+.tk.done .box::after{content:"";position:absolute;left:4px;top:1px;width:5px;height:9px;border:solid #04070A;border-width:0 2px 2px 0;transform:rotate(42deg)}
+.tk .nmx{font-family:var(--fm);font-size:12px;letter-spacing:.06em}
+.tk.done .nmx{color:var(--muted);text-decoration:line-through}
+.tk .rw{margin-left:auto;font-family:var(--fm);font-size:11px;color:var(--green)}
+
+@media(max-width:560px){
+  .keyart{min-height:380px;padding:32px 10px 0}
+  .lineup .p{margin:0 -18px}
+  .pane{padding:22px 18px}
+}
 
 .flowbox{border:1px solid var(--line2);background:var(--panel);padding:38px 28px 30px;margin-top:46px;overflow:hidden}
 .flowbox svg{width:100%;height:auto;display:block;max-width:960px;margin:0 auto}
@@ -269,7 +349,7 @@ footer .fine{font-family:var(--fm);font-size:11px;line-height:2;color:var(--mute
 <nav id="nav"><div class="inner">
   <div class="mk" id="navmk">9<i></i>16</div>
   <div class="lk">
-    <a href="#audit" data-c="play">The Audit</a>
+    <a href="#audit" data-c="play">BUST</a>
     <a href="#mech" data-c="read">Mechanism</a>
     <a href="#numbers" data-c="check">Numbers</a>
     <a href="#buy" data-c="buy">How To Buy</a>
@@ -299,68 +379,118 @@ footer .fine{font-family:var(--fm);font-size:11px;line-height:2;color:var(--mute
 
 <div class="mq"><div class="t" id="mqt"></div></div>
 
-<!-- ============ THE AUDIT ============ -->
+<!-- ============ BUST ============ -->
 <section id="audit">
   <div class="wrap">
     <div class="eyebrow rv">Doc. 916-002 · Coming after launch</div>
-    <div class="badge rv d1"><i></i>Pre-alpha · Built on 916</div>
-    <h2 class="rv d1">THE AUDIT.<br><em>One of you is cooking the books.</em></h2>
-    <p class="sub rv d2">Eight auditors board the settlement floor. Everyone reconciles ledgers. One of them is quietly forging entries. Find them before the books close — or the fraud gets signed off with your name on it.</p>
+    <div class="badge rv d1"><i></i>Pre-alpha · Free to play · Built on 916</div>
+    <h2 class="rv d1">BUST.<br><em>Somebody here is cooking the books.</em></h2>
+    <p class="sub rv d2">Ten auditors. One forged ledger. Finish your reconciliations, watch who lingers by the vault, and call the meeting before the books close.</p>
 
-    <div class="gamebox rv d3" id="gamebox">
-      <div class="peek">Sneak peek</div><div class="scan"></div>
-      <svg class="map" viewBox="0 0 900 380" role="img" aria-label="Sneak peek: top-down settlement floor with four rooms, corridors, and auditors moving between them.">
-        <rect x="0" y="0" width="900" height="380" fill="#080D14"/>
-        <path class="corr" d="M170 110 H730 M170 270 H730 M240 110 V270 M660 110 V270 M450 110 V270"/>
-        <rect class="room" x="60" y="46" width="220" height="128" rx="3"/>
-        <text class="roomlab" x="76" y="68">LEDGER ROOM</text>
-        <rect class="room" x="620" y="46" width="220" height="128" rx="3"/>
-        <text class="roomlab" x="636" y="68">THE VAULT</text>
-        <rect class="room" x="60" y="206" width="220" height="128" rx="3"/>
-        <text class="roomlab" x="76" y="228">RECONCILIATION</text>
-        <rect class="room" x="620" y="206" width="220" height="128" rx="3"/>
-        <text class="roomlab" x="636" y="228">ARCHIVE</text>
-        <rect class="room" x="356" y="126" width="188" height="128" rx="3"/>
-        <text class="roomlab" x="372" y="148">SETTLEMENT</text>
-
-        <circle class="task" cx="140" cy="120" r="8"><animate attributeName="opacity" values="1;.25;1" dur="2.4s" repeatCount="indefinite"/></circle>
-        <circle class="task" cx="720" cy="120" r="8"><animate attributeName="opacity" values="1;.25;1" dur="2.4s" begin=".8s" repeatCount="indefinite"/></circle>
-        <circle class="task" cx="140" cy="284" r="8"><animate attributeName="opacity" values="1;.25;1" dur="2.4s" begin="1.6s" repeatCount="indefinite"/></circle>
-
-        <g><use href="#crew" width="34" height="42" color="#2E6BFF"/>
-          <animateMotion dur="15s" repeatCount="indefinite" path="M150 96 H700 V250 H150 Z"/></g>
-        <g><use href="#crew" width="34" height="42" color="#4FCB98"/>
-          <animateMotion dur="19s" repeatCount="indefinite" path="M700 250 H150 V96 H700 Z"/></g>
-        <g><use href="#crew" width="34" height="42" color="#ACC6E9"/>
-          <animateMotion dur="12s" repeatCount="indefinite" path="M420 96 V250 H620 V96 Z"/></g>
-        <g><use href="#crew" width="34" height="42" color="#F0A93B"/>
-          <animateMotion dur="9s" repeatCount="indefinite" path="M240 250 H420 V96 H240 Z"/>
-          <animate attributeName="opacity" values="1;1;.35;1;1" dur="9s" repeatCount="indefinite"/></g>
-
-        <text x="450" y="356" text-anchor="middle" class="roomlab" style="letter-spacing:.3em">MATERIAL WEAKNESS DETECTED — CALL A MEETING</text>
+    <div class="keyart rv d3" id="keyart">
+      <div class="floor"></div>
+      <svg class="gear" viewBox="0 0 24 24" fill="none" stroke="#7FA6FF" stroke-width="1.6" aria-hidden="true">
+        <circle cx="12" cy="12" r="3.2"/>
+        <path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.2 5.2l2.1 2.1M16.7 16.7l2.1 2.1M18.8 5.2l-2.1 2.1M7.3 16.7l-2.1 2.1"/>
       </svg>
-      <div class="gamefoot">
-        <div><div class="k">Genre</div><div class="v">Social deduction, 4–10 players</div></div>
-        <div><div class="k">Currency</div><div class="v">916, in and out</div></div>
-        <div><div class="k">Status</div><div class="v">Pre-alpha, after mainnet</div></div>
-        <div><div class="k">Cost to play</div><div class="v">Free. Always.</div></div>
+      <h3 class="bust">BUST</h3>
+      <div class="subline">There is <b>1 BAD ACTOR</b> among the auditors</div>
+      <div class="tagline">PLAY TO EARN 916</div>
+      <div class="lineup"><div class="p" style="animation-delay:0.00s"><svg viewBox="0 0 120 150" width="68" height="85"><use href="#crew" color="#5E7086"/></svg></div><div class="p" style="animation-delay:0.14s"><svg viewBox="0 0 120 150" width="82" height="102"><use href="#crew" color="#4FCB98"/></svg></div><div class="p" style="animation-delay:0.28s"><svg viewBox="0 0 120 150" width="96" height="120"><use href="#crew" color="#ACC6E9"/></svg></div><div class="p" style="animation-delay:0.42s"><svg viewBox="0 0 120 150" width="110" height="137"><use href="#crew" color="#8494A6"/></svg></div><div class="p" style="animation-delay:0.56s"><svg viewBox="0 0 120 150" width="132" height="165"><use href="#crew" color="#2E6BFF"/></svg></div><div class="p" style="animation-delay:0.70s"><svg viewBox="0 0 120 150" width="122" height="152"><use href="#crew" color="#F0A93B"/></svg></div><div class="p" style="animation-delay:0.84s"><svg viewBox="0 0 120 150" width="106" height="132"><use href="#crew" color="#7FA6FF"/></svg></div><div class="p" style="animation-delay:0.98s"><svg viewBox="0 0 120 150" width="92" height="115"><use href="#crew" color="#4FCB98"/></svg></div><div class="p" style="animation-delay:1.12s"><svg viewBox="0 0 120 150" width="78" height="97"><use href="#crew" color="#ACC6E9"/></svg></div><div class="p" style="animation-delay:1.26s"><svg viewBox="0 0 120 150" width="66" height="82"><use href="#crew" color="#5E7086"/></svg></div></div>
+      <div class="shadow"></div>
+    </div>
+
+    <div class="console rv d4" id="console">
+      <div class="tabs" role="tablist">
+        <button role="tab" aria-selected="true" data-p="lobby" data-c="open">Lobby</button>
+        <button role="tab" aria-selected="false" data-p="map" data-c="open">The Floor</button>
+        <button role="tab" aria-selected="false" data-p="roles" data-c="open">Roles</button>
+        <button role="tab" aria-selected="false" data-p="rewards" data-c="open">Rewards</button>
+      </div>
+
+      <div class="pane" data-pane="lobby" data-on>
+        <div class="slots">
+          <div class="slot"><svg viewBox="0 0 120 150"><use href="#crew" color="#2E6BFF"/></svg><div class="h">ANALYST</div><div class="st">READY</div></div>
+          <div class="slot"><svg viewBox="0 0 120 150"><use href="#crew" color="#4FCB98"/></svg><div class="h">CONTROLLER</div><div class="st">READY</div></div>
+          <div class="slot"><svg viewBox="0 0 120 150"><use href="#crew" color="#ACC6E9"/></svg><div class="h">REGISTRAR</div><div class="st">READY</div></div>
+          <div class="slot"><svg viewBox="0 0 120 150"><use href="#crew" color="#8494A6"/></svg><div class="h">CUSTODIAN</div><div class="st">READY</div></div>
+          <div class="slot"><svg viewBox="0 0 120 150"><use href="#crew" color="#7FA6FF"/></svg><div class="h">TRUSTEE</div><div class="st">READY</div></div>
+          <div class="slot"><svg viewBox="0 0 120 150"><use href="#crew" color="#F0A93B"/></svg><div class="h">?????</div><div class="st">READY</div></div>
+          <div class="slot"><svg viewBox="0 0 120 150"><use href="#crew" color="#5E7086"/></svg><div class="h">CLERK</div><div class="st">READY</div></div>
+          <div class="slot empty"><svg viewBox="0 0 120 150"><use href="#crew" color="#1E2A36"/></svg><div class="h">OPEN</div><div class="st">WAITING</div></div>
+        </div>
+        <div class="lobbybar">
+          <span class="lb">7 / 10 auditors seated</span>
+          <div class="meter"><i></i></div>
+          <span class="lb">Round starts when the floor fills</span>
+        </div>
+      </div>
+
+      <div class="pane" data-pane="map">
+        <svg class="map" viewBox="0 0 900 380" style="width:100%;height:auto;display:block" role="img" aria-label="The settlement floor: five rooms joined by corridors, with auditors moving between them.">
+          <rect x="0" y="0" width="900" height="380" fill="#080D14"/>
+          <path class="corr" d="M170 110 H730 M170 270 H730 M240 110 V270 M660 110 V270 M450 110 V270"/>
+          <rect class="room" x="60" y="46" width="220" height="128" rx="3"/><text class="roomlab" x="76" y="68">LEDGER ROOM</text>
+          <rect class="room" x="620" y="46" width="220" height="128" rx="3"/><text class="roomlab" x="636" y="68">THE VAULT</text>
+          <rect class="room" x="60" y="206" width="220" height="128" rx="3"/><text class="roomlab" x="76" y="228">RECONCILIATION</text>
+          <rect class="room" x="620" y="206" width="220" height="128" rx="3"/><text class="roomlab" x="636" y="228">ARCHIVE</text>
+          <rect class="room" x="356" y="126" width="188" height="128" rx="3"/><text class="roomlab" x="372" y="148">SETTLEMENT</text>
+          <circle class="task" cx="140" cy="120" r="8"><animate attributeName="opacity" values="1;.25;1" dur="2.4s" repeatCount="indefinite"/></circle>
+          <circle class="task" cx="720" cy="120" r="8"><animate attributeName="opacity" values="1;.25;1" dur="2.4s" begin=".8s" repeatCount="indefinite"/></circle>
+          <circle class="task" cx="140" cy="284" r="8"><animate attributeName="opacity" values="1;.25;1" dur="2.4s" begin="1.6s" repeatCount="indefinite"/></circle>
+          <g><use href="#crew" width="34" height="42" color="#2E6BFF"/><animateMotion dur="15s" repeatCount="indefinite" path="M150 96 H700 V250 H150 Z"/></g>
+          <g><use href="#crew" width="34" height="42" color="#4FCB98"/><animateMotion dur="19s" repeatCount="indefinite" path="M700 250 H150 V96 H700 Z"/></g>
+          <g><use href="#crew" width="34" height="42" color="#ACC6E9"/><animateMotion dur="12s" repeatCount="indefinite" path="M420 96 V250 H620 V96 Z"/></g>
+          <g><use href="#crew" width="34" height="42" color="#F0A93B"/><animateMotion dur="9s" repeatCount="indefinite" path="M240 250 H420 V96 H240 Z"/><animate attributeName="opacity" values="1;1;.3;1;1" dur="9s" repeatCount="indefinite"/></g>
+          <text x="450" y="356" text-anchor="middle" class="roomlab" style="letter-spacing:.3em">MATERIAL WEAKNESS DETECTED — CALL A MEETING</text>
+        </svg>
+        <div class="tasklist" style="margin-top:22px">
+          <div class="tk done"><span class="box"></span><span class="nmx">RECONCILE PETTY CASH</span><span class="rw">+12 916</span></div>
+          <div class="tk done"><span class="box"></span><span class="nmx">STAMP THE DAY BOOK</span><span class="rw">+12 916</span></div>
+          <div class="tk"><span class="box"></span><span class="nmx">COUNT THE VAULT</span><span class="rw">+25 916</span></div>
+          <div class="tk"><span class="box"></span><span class="nmx">FILE THE ARCHIVE</span><span class="rw">+18 916</span></div>
+        </div>
+      </div>
+
+      <div class="pane" data-pane="roles">
+        <div class="rolecards">
+          <div class="rc">
+            <div class="rh"><svg viewBox="0 0 120 150"><use href="#crew" color="#2E6BFF"/></svg>
+              <div><div class="rt">Role · 9 of 10</div><h4>Auditor</h4></div></div>
+            <ul>
+              <li><i>01</i>Clear your reconciliations before the books close</li>
+              <li><i>02</i>Report a forged entry to call an emergency meeting</li>
+              <li><i>03</i>Vote. Get it right and the round pays out to the floor.</li>
+              <li><i>04</i>You cannot see who else is an auditor. Nobody can.</li>
+            </ul>
+          </div>
+          <div class="rc bad">
+            <div class="rh"><svg viewBox="0 0 120 150"><use href="#crew" color="#F0A93B"/></svg>
+              <div><div class="rt">Role · 1 of 10</div><h4>Bad Actor</h4></div></div>
+            <ul>
+              <li><i>01</i>Forge entries without being seen doing it</li>
+              <li><i>02</i>Falsify a task to look like you are working</li>
+              <li><i>03</i>Use the archive ducts. They are not on the floor plan.</li>
+              <li><i>04</i>Survive the vote and the fraud gets signed off.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="pane" data-pane="rewards">
+        <div class="p2e" style="margin-top:0">
+          <div class="p2ec"><div class="ic">01</div><h4>Play free, earn 916</h4><p>Finish your reconciliations and take a cut of the round pot. Bust the bad actor and take more. Nothing to buy to start.</p></div>
+          <div class="p2ec"><div class="ic">02</div><h4>Weekly settlement</h4><p>The leaderboard closes every Monday and pays out on chain, in public, with the transaction posted like everything else.</p></div>
+          <div class="p2ec"><div class="ic">03</div><h4>Spend it on nonsense</h4><p>Briefcase skins, stamp emotes, and a filing cabinet you will never need. 916 in, 916 out, no other currency.</p></div>
+        </div>
+        <div class="tasklist" style="margin-top:18px">
+          <div class="tk"><span class="box"></span><span class="nmx">ROUND SURVIVED</span><span class="rw">+40 916</span></div>
+          <div class="tk"><span class="box"></span><span class="nmx">BAD ACTOR BUSTED</span><span class="rw">+120 916</span></div>
+          <div class="tk"><span class="box"></span><span class="nmx">FRAUD SIGNED OFF (as the bad actor)</span><span class="rw">+150 916</span></div>
+        </div>
       </div>
     </div>
-
-    <div class="cast rv d4">
-      <div class="crew"><svg viewBox="0 0 120 150"><use href="#crew" color="#2E6BFF"/></svg><div class="nm">Analyst</div><div class="rl">Auditor</div></div>
-      <div class="crew"><svg viewBox="0 0 120 150"><use href="#crew" color="#4FCB98"/></svg><div class="nm">Controller</div><div class="rl">Auditor</div></div>
-      <div class="crew"><svg viewBox="0 0 120 150"><use href="#crew" color="#ACC6E9"/></svg><div class="nm">Registrar</div><div class="rl">Auditor</div></div>
-      <div class="crew"><svg viewBox="0 0 120 150"><use href="#crew" color="#8494A6"/></svg><div class="nm">Custodian</div><div class="rl">Auditor</div></div>
-      <div class="crew bad"><svg viewBox="0 0 120 150"><use href="#crew" color="#F0A93B"/></svg><div class="nm">?????</div><div class="rl">Bad actor</div></div>
-    </div>
-
-    <div class="p2e">
-      <div class="p2ec rv d1"><div class="ic">01</div><h4>Play free, earn 916</h4><p>Finish your reconciliations and you take a cut of the round pot. Catch the bad actor and you take more. Nothing to buy to start.</p></div>
-      <div class="p2ec rv d2"><div class="ic">02</div><h4>Weekly settlement</h4><p>The leaderboard closes every Monday and pays out on chain, in public, with the transaction posted like everything else.</p></div>
-      <div class="p2ec rv d3"><div class="ic">03</div><h4>Spend it on nonsense</h4><p>Briefcase skins, stamp emotes, and a filing cabinet you will never need. 916 in, 916 out, no other currency.</p></div>
-    </div>
-    <p class="sub rv d4" style="margin-top:26px;font-size:.9rem">Pre-alpha. Dates, mechanics and payouts will change, and nothing here is a promise of value or return.</p>
+    <p class="sub rv d5" style="margin-top:24px;font-size:.9rem">Pre-alpha. Rooms, roles, dates and payouts will all change, and nothing here is a promise of value or return.</p>
   </div>
 </section>
 
@@ -465,7 +595,7 @@ footer .fine{font-family:var(--fm);font-size:11px;line-height:2;color:var(--mute
       <div class="rail"></div><div class="fill"></div>
       <div class="tlrow"><div class="dot"></div><div class="when">16 SEP 2026 · Day zero</div><h4>Arc mainnet opens. So does the pool.</h4><p>Deployed in the first hour, on RadarDEX, in a USDC pair. Contract address posted the second it exists.</p></div>
       <div class="tlrow"><div class="dot"></div><div class="when">Week one</div><h4>First distribution to holders of record</h4><p>Paid in dollars, from trading, with the transaction posted. Receipts before jokes.</p></div>
-      <div class="tlrow"><div class="dot"></div><div class="when">After launch</div><h4>THE AUDIT opens in pre-alpha</h4><p>Free to play, 916 in and out, and the first weekly settlement paid on chain.</p></div>
+      <div class="tlrow"><div class="dot"></div><div class="when">After launch</div><h4>BUST opens in pre-alpha</h4><p>Free to play, 916 in and out, and the first weekly settlement paid on chain.</p></div>
       <div class="tlrow"><div class="dot"></div><div class="when">Every 16 September</div><h4>916 Day</h4><p>The chain has a birthday now. So does the coin named after it.</p></div>
     </div>
   </div>
@@ -507,7 +637,7 @@ footer .fine{font-family:var(--fm);font-size:11px;line-height:2;color:var(--mute
       <a href="https://github.com/tonytheruthla/ninesixteen" rel="noopener" data-c="code">Source</a>
     </div>
     <p class="fine">
-      916 is a meme coin. It has no intrinsic value, no utility, no team allocation, and no expectation of financial return. Buying it is not an investment and nothing on this page is investment, legal or tax advice. You can lose everything you put in. THE AUDIT is unreleased pre-alpha software; its features, dates and payouts are subject to change or cancellation.<br><br>
+      916 is a meme coin. It has no intrinsic value, no utility, no team allocation, and no expectation of financial return. Buying it is not an investment and nothing on this page is investment, legal or tax advice. You can lose everything you put in. BUST is unreleased pre-alpha software; its features, dates and payouts are subject to change or cancellation.<br><br>
       Not affiliated with, endorsed by, or connected to Circle, Arc, RadarDEX, or any validator. Uses none of their trademarks. Verify every claim on this page against the chain before acting on it.
     </p>
   </div>
@@ -530,7 +660,7 @@ footer .fine{font-family:var(--fm);font-size:11px;line-height:2;color:var(--mute
       document.body.classList.add('cursoron');
     },{passive:true});
     (function loop(){x+=(tx-x)*.16;y+=(ty-y)*.16;cur.style.transform='translate('+x+'px,'+y+'px)';requestAnimationFrame(loop);})();
-    document.querySelectorAll('a,button,.step,.stat,.unit,.crew,.p2ec,[data-c]').forEach(function(el){
+    document.querySelectorAll('a,button,.step,.stat,.unit,.slot,.p2ec,.rc,[data-c]').forEach(function(el){
       el.addEventListener('mouseenter',function(){
         cur.classList.add('on');
         var l=el.getAttribute('data-c');
@@ -553,7 +683,7 @@ footer .fine{font-family:var(--fm);font-size:11px;line-height:2;color:var(--mute
   }
   tick();setInterval(tick,1000);
 
-  var lines=["a date you can buy","filed.","gas is a stablecoin — the memecoin pays a distribution","holders of record","zero team allocation. nothing to unlock.","they built the rails, we put a coin on them","no roadmap. there's a calendar.","settled.","9/16 is not a fraction","one of you is cooking the books","bought a memecoin, received a memo","the LP has no withdraw path. neither do we.","every 16 September. forever.","read the contract. we'll wait.","see you on the sixteenth."];
+  var lines=["a date you can buy","filed.","gas is a stablecoin — the memecoin pays a distribution","holders of record","zero team allocation. nothing to unlock.","they built the rails, we put a coin on them","no roadmap. there's a calendar.","settled.","9/16 is not a fraction","BUST — one of you is cooking the books","bought a memecoin, received a memo","the LP has no withdraw path. neither do we.","every 16 September. forever.","read the contract. we'll wait.","see you on the sixteenth."];
   var html='';for(var r=0;r<2;r++){lines.forEach(function(l){html+='<span><b>/</b> '+l+'</span>';});}
   document.getElementById('mqt').innerHTML=html;
 
@@ -623,6 +753,17 @@ footer .fine{font-family:var(--fm);font-size:11px;line-height:2;color:var(--mute
     mk.addEventListener('click',function(){
       if(++taps<3)return;taps=0;egg.classList.add('on');
       setTimeout(function(){egg.classList.remove('on');},1500);});}
+
+  var tabs=document.querySelectorAll('.tabs button');
+  tabs.forEach(function(btn){
+    btn.addEventListener('click',function(){
+      tabs.forEach(function(b){b.setAttribute('aria-selected','false');});
+      btn.setAttribute('aria-selected','true');
+      document.querySelectorAll('.pane').forEach(function(p){p.removeAttribute('data-on');});
+      var t=document.querySelector('.pane[data-pane="'+btn.getAttribute('data-p')+'"]');
+      if(t)t.setAttribute('data-on','');
+    });
+  });
 
   var hint=document.getElementById('hint');
   if(hint)addEventListener('scroll',function(){hint.style.opacity=(scrollY||pageYOffset)>140?'0':'1';},{passive:true});
