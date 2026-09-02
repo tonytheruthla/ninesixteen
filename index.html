@@ -75,7 +75,7 @@ section{position:relative;padding:94px 0;z-index:1;overflow-x:clip;scroll-margin
 h2{font-weight:900;font-size:clamp(2rem,5.2vw,3.5rem);letter-spacing:-.04em;line-height:1;text-wrap:balance;margin-bottom:18px}
 h2 em{font-style:normal;color:var(--red)}
 .sub{color:var(--muted);max-width:56ch;font-size:1.04rem}
-.rv{opacity:0;transform:translateY(26px);transition:opacity .75s cubic-bezier(.2,.8,.2,1),transform .75s cubic-bezier(.2,.8,.2,1)}
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .75s cubic-bezier(.2,.8,.2,1),transform .75s cubic-bezier(.2,.8,.2,1)}
 .rv.in{opacity:1;transform:none}
 .d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}.d5{transition-delay:.4s}
 
@@ -213,7 +213,8 @@ h2 em{font-style:normal;color:var(--red)}
 /* ============ stamps ============ */
 .stampgrid{display:flex;flex-wrap:wrap;gap:15px;margin-top:44px}
 .stmp{font-family:var(--fm);font-weight:700;font-size:13px;letter-spacing:.19em;text-transform:uppercase;color:var(--red);
-  border:2px solid var(--red);padding:12px 19px;opacity:0;transform:scale(1.7) rotate(-11deg)}
+  border:2px solid var(--red);padding:12px 19px}
+.js .stmp{opacity:0;transform:scale(1.7) rotate(-11deg)}
 .stmp.in{animation:thunk .55s cubic-bezier(.2,1.5,.4,1) forwards}
 @keyframes thunk{to{opacity:1;transform:scale(1) rotate(var(--r,-2deg))}}
 
@@ -253,6 +254,7 @@ footer .fine{font-family:var(--fm);font-size:11px;line-height:2;color:var(--mute
   #cur,#curX,#curY,#dot{display:none}
 }
 </style>
+<script>document.documentElement.className+=" js";</script>
 </head>
 <body>
 
@@ -589,6 +591,23 @@ footer .fine{font-family:var(--fm);font-size:11px;line-height:2;color:var(--mute
       if(y<1200) ghost.style.transform='translateY(calc(-50% + '+(y*0.16)+'px))';
     },{passive:true});
   }
+
+  /* ---------- safety net: nothing stays invisible ---------- */
+  function revealAll(){
+    document.querySelectorAll('.rv,.unit,#flow,#tl,#donutcard,#supplycard').forEach(function(n){ n.classList.add('in'); });
+    document.querySelectorAll('.stmp').forEach(function(n){ n.classList.add('in'); });
+    document.querySelectorAll('[data-count]').forEach(function(n){
+      if(n.textContent!=='0') return;
+      var v=parseFloat(n.getAttribute('data-count')), suf=n.getAttribute('data-suf')||'',
+          isInt=n.getAttribute('data-fmt')==='int';
+      n.textContent=(isInt? v.toLocaleString('en-US') : v)+suf;
+    });
+    var C=452, dp=document.getElementById('dpub'), dd=document.getElementById('ddev');
+    if(dp) dp.style.strokeDashoffset=C*0.04;
+    if(dd) dd.style.strokeDashoffset=C*0.96;
+  }
+  setTimeout(revealAll, 7000);
+  addEventListener('error', revealAll);
 
   /* ---------- easter egg ---------- */
   var taps=0, egg=document.getElementById('egg'), navmk=document.querySelector('nav .mk');
