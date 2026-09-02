@@ -4,16 +4,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Arc Day — September the 16th</title>
-<meta name="description" content="Arc Day, September the 16th. The day Circle's chain opens and 916 goes live on it. Zero team allocation. Holders of record paid in USDC from trading fees. BUST arriving after launch.">
+<meta name="description" content="916 is live. Contract 0x96690bb2234439ae690138a6ac0bae1cdc03329e on Arc, trading against USDC on RadarDEX. Holders of record are paid in USDC from trading fees. BUST arriving after launch.">
 <link rel="icon" type="image/png" href="/916-logo-512.png">
 <meta property="og:title" content="Arc Day — September the 16th">
-<meta property="og:description" content="The chain opens once. The date comes back every year.">
+<meta property="og:description" content="Live now on RadarDEX. The chain opens once — the date comes back every year.">
 <meta property="og:image" content="https://ninesixteen.xyz/916-og.png">
 <meta property="og:url" content="https://ninesixteen.xyz/">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Arc Day — September the 16th">
-<meta name="twitter:description" content="The chain opens once. The date comes back every year.">
+<meta name="twitter:description" content="Live now on RadarDEX. The chain opens once — the date comes back every year.">
 <meta name="twitter:image" content="https://ninesixteen.xyz/916-og.png">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap">
@@ -103,6 +103,22 @@ h2 em{font-style:normal;color:var(--blue2)}
 .mq .t span{padding:0 30px;white-space:nowrap}
 .mq .t span b{color:var(--blue2);font-weight:400}
 @keyframes sc{to{transform:translateX(-50%)}}
+
+.livebar{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:26px 0 4px}
+.livepill{display:inline-flex;align-items:center;gap:9px;font-family:var(--fm);font-weight:700;font-size:10.5px;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--green);border:1px solid var(--green);padding:8px 14px}
+.livepill i{width:7px;height:7px;border-radius:50%;background:var(--green);font-style:normal;animation:blip 1.5s ease-in-out infinite}
+.capill{display:inline-flex;align-items:center;gap:10px;font-family:var(--fm);font-size:11.5px;color:var(--muted);
+  border:1px solid var(--line2);padding:8px 12px;background:var(--panel);cursor:pointer;transition:border-color .3s,color .3s}
+.capill:hover{border-color:var(--blue);color:var(--ink)}
+.capill b{color:var(--blue2);font-weight:500}
+.addr{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1px;background:var(--line2);border:1px solid var(--line2);margin-top:20px}
+.addr div{background:var(--panel2);padding:16px 18px}
+.addr .k{font-family:var(--fm);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:7px}
+.addr .v{font-family:var(--fm);font-size:12.5px;color:var(--ink);word-break:break-all}
+button.copyca{font-family:var(--fm);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;background:none;
+  border:1px solid var(--blue);color:var(--blue2);padding:11px 18px;cursor:pointer;margin-top:18px;transition:background .3s,color .3s}
+button.copyca:hover{background:var(--blue);color:#fff}
 
 /* ===== BUST ===== */
 .badge{display:inline-flex;align-items:center;gap:9px;font-family:var(--fm);font-size:10px;letter-spacing:.2em;text-transform:uppercase;
@@ -352,7 +368,8 @@ footer .fine{font-family:var(--fm);font-size:11px;line-height:2;color:var(--mute
     <a href="#audit" data-c="play">BUST</a>
     <a href="#mech" data-c="read">Mechanism</a>
     <a href="#numbers" data-c="check">Numbers</a>
-    <a href="#buy" data-c="buy">How To Buy</a>
+    <a href="#buy" data-c="how">How To Buy</a>
+    <a href="https://radardex.pro/#0x96690bb2234439ae690138a6ac0bae1cdc03329e" rel="noopener" data-c="buy" style="color:var(--blue2)">Buy 916</a>
   </div>
   <div id="prog"></div>
 </div></nav>
@@ -363,14 +380,18 @@ footer .fine{font-family:var(--fm);font-size:11px;line-height:2;color:var(--mute
     <div class="eyebrow rv">Notice of launch · Doc. 916-001 · Arc mainnet</div>
     <h1 class="rv d1">ARC DAY<span class="l2">SEPTEMBER THE 16TH</span></h1>
     <p class="kick rv d2">The day Circle's chain opens for everyone. <b>Sub-second finality. Gas paid in dollars. Validators who wear suits.</b> And in the first hour, the most serious blockchain ever built gets its first meme coin.</p>
-    <div class="clock rv d3">
+    <div class="clock rv d3" aria-label="Countdown to Arc Day">
       <div class="unit"><span class="n" id="d">--</span><span class="l">Days</span></div>
       <div class="unit"><span class="n" id="h">--</span><span class="l">Hours</span></div>
       <div class="unit"><span class="n" id="m">--</span><span class="l">Minutes</span></div>
       <div class="unit"><span class="n" id="s">--</span><span class="l">Seconds</span></div>
     </div>
+    <div class="livebar rv d3">
+      <span class="livepill"><i></i>Live now on RadarDEX</span>
+      <span class="capill" id="heroca" data-c="copy">CA <b>0x9669…329e</b></span>
+    </div>
     <div class="cta rv d4">
-      <a class="btn pri" href="#buy" data-c="go"><span>Be there first</span></a>
+      <a class="btn pri" href="https://radardex.pro/#0x96690bb2234439ae690138a6ac0bae1cdc03329e" rel="noopener" data-c="buy"><span>Buy 916</span></a>
       <a class="btn" href="#audit" data-c="peek"><span>See the game</span></a>
     </div>
     <div class="hint rv d5" id="hint"><span class="mono">Scroll</span><i></i></div>
@@ -545,42 +566,25 @@ footer .fine{font-family:var(--fm);font-size:11px;line-height:2;color:var(--mute
     <p class="sub rv d2">Read it on the explorer instead of believing us. That is the point of launching on a chain built by people who audit things.</p>
 
     <div class="stats rv d3">
-      <div class="stat"><div class="n" data-count="916" data-suf="M">0</div><div class="k">Starting supply</div><div class="s">916,000,000 at launch. It only ever goes down.</div></div>
-      <div class="stat"><div class="n g" data-count="0">0</div><div class="k">Team allocation</div><div class="s">Not one token. Nothing to unlock, ever.</div></div>
+      <div class="stat"><div class="n" data-count="1" data-suf="B">0</div><div class="k">Starting supply</div><div class="s">1,000,000,000 at launch. It only ever goes down.</div></div>
       <div class="stat"><div class="n b" data-count="100" data-suf="%">0</div><div class="k">Liquidity locked</div><div class="s">No withdraw path. Not for us either.</div></div>
       <div class="stat"><div class="n p" data-count="0">0</div><div class="k">Presale</div><div class="s">Nobody got in before you.</div></div>
     </div>
 
-    <div class="two">
-      <div class="card rv" id="donutcard">
-        <h3>Where the supply sits</h3>
-        <svg viewBox="0 0 200 200" class="donut" role="img" aria-label="100 percent of supply is in the public pool">
-          <circle cx="100" cy="100" r="72" stroke="#26333F" stroke-dasharray="452" stroke-dashoffset="0"></circle>
-          <circle cx="100" cy="100" r="72" stroke="#2E6BFF" stroke-dasharray="452" stroke-dashoffset="452" id="dpub"></circle>
-          <text x="100" y="96" text-anchor="middle" fill="#E8EEF6" style="font-family:var(--ff);font-weight:900;font-size:30px;letter-spacing:-.04em">100%</text>
-          <text x="100" y="118" text-anchor="middle" fill="#7E8FA3" style="font-family:var(--fm);font-size:9px;letter-spacing:.16em">PUBLIC</text>
-        </svg>
-        <div class="dlab">
-          <div><i style="background:#2E6BFF"></i>Public pool, liquidity locked<b>100%</b></div>
-          <div><i style="background:#26333F"></i>Team, insiders, presale<b>0%</b></div>
-        </div>
-      </div>
-      <div class="card rv d1" id="supplycard">
-        <h3>Supply over time</h3>
-        <svg viewBox="0 0 320 190" role="img" aria-label="Supply declining over time as tokens burn">
-          <defs><linearGradient id="sg" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#2E6BFF" stop-opacity=".3"/><stop offset="100%" stop-color="#2E6BFF" stop-opacity="0"/></linearGradient></defs>
-          <line x1="0" y1="150" x2="320" y2="150" stroke="#18222E"/>
-          <line x1="0" y1="100" x2="320" y2="100" stroke="#18222E"/>
-          <line x1="0" y1="50" x2="320" y2="50" stroke="#18222E"/>
-          <path class="sarea" d="M0 32 C 70 40, 120 62, 175 84 C 230 106, 275 120, 320 128 L320 150 L0 150 Z"/>
-          <path class="spath" d="M0 32 C 70 40, 120 62, 175 84 C 230 106, 275 120, 320 128"/>
-          <circle cx="320" cy="128" r="4" fill="#7FA6FF"/>
-          <text x="4" y="24" style="font-family:var(--fm);font-size:9px;letter-spacing:.14em" fill="#7E8FA3">916,000,000</text>
-          <text x="4" y="168" style="font-family:var(--fm);font-size:9px;letter-spacing:.14em" fill="#7E8FA3">16 SEP 2026 →</text>
-        </svg>
-        <div class="dlab"><div><i style="background:#2E6BFF"></i>Every trade burns the token half of the fee<b>↓</b></div></div>
-      </div>
+    <div class="card rv" id="supplycard" style="margin-top:22px">
+      <h3>Supply over time</h3>
+      <svg viewBox="0 0 320 190" role="img" aria-label="Supply declining over time as tokens burn">
+        <defs><linearGradient id="sg" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#2E6BFF" stop-opacity=".3"/><stop offset="100%" stop-color="#2E6BFF" stop-opacity="0"/></linearGradient></defs>
+        <line x1="0" y1="150" x2="320" y2="150" stroke="#18222E"/>
+        <line x1="0" y1="100" x2="320" y2="100" stroke="#18222E"/>
+        <line x1="0" y1="50" x2="320" y2="50" stroke="#18222E"/>
+        <path class="sarea" d="M0 32 C 70 40, 120 62, 175 84 C 230 106, 275 120, 320 128 L320 150 L0 150 Z"/>
+        <path class="spath" d="M0 32 C 70 40, 120 62, 175 84 C 230 106, 275 120, 320 128"/>
+        <circle cx="320" cy="128" r="4" fill="#7FA6FF"/>
+        <text x="4" y="24" style="font-family:var(--fm);font-size:9px;letter-spacing:.14em" fill="#7E8FA3">AT LAUNCH</text>
+        <text x="4" y="168" style="font-family:var(--fm);font-size:9px;letter-spacing:.14em" fill="#7E8FA3">EVERY TRADE BURNS THE TOKEN HALF OF THE FEE →</text>
+      </svg>
     </div>
   </div>
 </section>
@@ -593,7 +597,7 @@ footer .fine{font-family:var(--fm);font-size:11px;line-height:2;color:var(--mute
     <p class="sub rv d2">Most meme coins are a weekend. This one has an anniversary built into its name and a calendar entry that never moves.</p>
     <div class="tl rv d3" id="tl">
       <div class="rail"></div><div class="fill"></div>
-      <div class="tlrow"><div class="dot"></div><div class="when">16 SEP 2026 · Day zero</div><h4>Arc mainnet opens. So does the pool.</h4><p>Deployed in the first hour, on RadarDEX, in a USDC pair. Contract address posted the second it exists.</p></div>
+      <div class="tlrow"><div class="dot"></div><div class="when">Day zero · Live</div><h4>The pool is open. 916 is trading.</h4><p>Deployed on RadarDEX in a USDC pair, liquidity locked, contract renounced. The address is published above and nowhere else.</p></div>
       <div class="tlrow"><div class="dot"></div><div class="when">Week one</div><h4>First distribution to holders of record</h4><p>Paid in dollars, from trading, with the transaction posted. Receipts before jokes.</p></div>
       <div class="tlrow"><div class="dot"></div><div class="when">After launch</div><h4>BUST opens in pre-alpha</h4><p>Free to play, 916 in and out, and the first weekly settlement paid on chain.</p></div>
       <div class="tlrow"><div class="dot"></div><div class="when">Every 16 September</div><h4>916 Day</h4><p>The chain has a birthday now. So does the coin named after it.</p></div>
@@ -605,21 +609,22 @@ footer .fine{font-family:var(--fm);font-size:11px;line-height:2;color:var(--mute
 <section id="buy">
   <div class="wrap">
     <div class="eyebrow rv">Doc. 916-006 · How to be there</div>
-    <h2 class="rv d1">Three steps.<br><em>Do the first two now.</em></h2>
-    <p class="sub rv d2">The pool opens in the first hour after mainnet confirms. People who set up on the day arrive late.</p>
+    <h2 class="rv d1">Three steps.<br><em>It is already live.</em></h2>
+    <p class="sub rv d2">916 is trading now, against USDC, on RadarDEX. Gas is USDC too, so it is the only asset you need.</p>
     <div class="steps">
-      <div class="step rv d1"><div class="no">STEP 01</div><h4>Get USDC onto Arc</h4><p>Gas is USDC too, so it is the only asset you need. Bridge before the day, not during it.</p></div>
-      <div class="step rv d2"><div class="no">STEP 02</div><h4>Open RadarDEX</h4><p>Connect a wallet and find it ready. Verify the domain from the official account first.</p></div>
-      <div class="step rv d3"><div class="no">STEP 03</div><h4>Check the address twice</h4><p>Impostors appear within minutes of any launch. One address, published here and on the pinned post.</p></div>
+      <div class="step rv d1"><div class="no">STEP 01</div><h4>Get USDC onto Arc</h4><p>Gas is USDC too, so it is the only asset you need on the whole chain. Bridge it over and you are done.</p></div>
+      <div class="step rv d2"><div class="no">STEP 02</div><h4>Open RadarDEX</h4><p>Connect a wallet, then open the 916 / USDC pair. Verify the domain from the official account before you connect.</p></div>
+      <div class="step rv d3"><div class="no">STEP 03</div><h4>Check the address twice</h4><p>Impostors appear within minutes of any launch. Compare what you are about to buy against the address below, character by character.</p></div>
     </div>
     <div class="ca rv d4">
-      <div class="k">Contract address · Arc mainnet</div>
-      <div class="v" id="cav">Not yet deployed · 16 SEP 2026</div>
+      <div class="k">Contract address · Arc · 916 / USDC</div>
+      <div class="v" id="cav" style="color:var(--ink)">0x96690bb2234439ae690138a6ac0bae1cdc03329e</div>
+      <button class="copyca" id="copyca" data-c="copy">Copy address</button>
+      <a class="btn pri" href="https://radardex.pro/#0x96690bb2234439ae690138a6ac0bae1cdc03329e" rel="noopener" data-c="buy" style="margin:18px 0 0 10px"><span>Buy on RadarDEX</span></a>
       <div class="warn">One address. Published here and on the pinned post.<br>Anyone who sends you a different one is taking your money.</div>
     </div>
     <div class="stampgrid" id="stamps">
       <span class="stmp" style="--r:-3deg">No presale</span>
-      <span class="stmp" style="--r:2deg">No team allocation</span>
       <span class="stmp" style="--r:-1.5deg">Liquidity locked</span>
       <span class="stmp" style="--r:3deg">No owner</span>
       <span class="stmp" style="--r:-2.5deg">Cannot mint</span>
@@ -633,11 +638,11 @@ footer .fine{font-family:var(--fm);font-size:11px;line-height:2;color:var(--mute
     <div class="flinks">
       <a href="https://x.com/" rel="noopener" data-c="follow">X / Twitter</a>
       <a href="https://t.me/" rel="noopener" data-c="join">Telegram</a>
-      <a href="https://radardex.pro/" rel="noopener" data-c="chart">Chart</a>
+      <a href="https://radardex.pro/#0x96690bb2234439ae690138a6ac0bae1cdc03329e" rel="noopener" data-c="chart">Chart · 916/USDC</a>
       <a href="https://github.com/tonytheruthla/ninesixteen" rel="noopener" data-c="code">Source</a>
     </div>
     <p class="fine">
-      916 is a meme coin. It has no intrinsic value, no utility, no team allocation, and no expectation of financial return. Buying it is not an investment and nothing on this page is investment, legal or tax advice. You can lose everything you put in. BUST is unreleased pre-alpha software; its features, dates and payouts are subject to change or cancellation.<br><br>
+      916 is a meme coin. It has no intrinsic value, no utility, and no expectation of financial return. Buying it is not an investment and nothing on this page is investment, legal or tax advice. You can lose everything you put in. BUST is unreleased pre-alpha software; its features, dates and payouts are subject to change or cancellation.<br><br>
       Not affiliated with, endorsed by, or connected to Circle, Arc, RadarDEX, or any validator. Uses none of their trademarks. Verify every claim on this page against the chain before acting on it.
     </p>
   </div>
@@ -660,7 +665,7 @@ footer .fine{font-family:var(--fm);font-size:11px;line-height:2;color:var(--mute
       document.body.classList.add('cursoron');
     },{passive:true});
     (function loop(){x+=(tx-x)*.16;y+=(ty-y)*.16;cur.style.transform='translate('+x+'px,'+y+'px)';requestAnimationFrame(loop);})();
-    document.querySelectorAll('a,button,.step,.stat,.unit,.slot,.p2ec,.rc,[data-c]').forEach(function(el){
+    document.querySelectorAll('a,button,.step,.stat,.unit,.slot,.p2ec,.rc,.capill,[data-c]').forEach(function(el){
       el.addEventListener('mouseenter',function(){
         cur.classList.add('on');
         var l=el.getAttribute('data-c');
@@ -683,7 +688,7 @@ footer .fine{font-family:var(--fm);font-size:11px;line-height:2;color:var(--mute
   }
   tick();setInterval(tick,1000);
 
-  var lines=["a date you can buy","filed.","gas is a stablecoin — the memecoin pays a distribution","holders of record","zero team allocation. nothing to unlock.","they built the rails, we put a coin on them","no roadmap. there's a calendar.","settled.","9/16 is not a fraction","BUST — one of you is cooking the books","bought a memecoin, received a memo","the LP has no withdraw path. neither do we.","every 16 September. forever.","read the contract. we'll wait.","see you on the sixteenth."];
+  var lines=["a date you can buy","filed.","gas is a stablecoin — the memecoin pays a distribution","holders of record","916 is live. the address is on the site.","they built the rails, we put a coin on them","no roadmap. there's a calendar.","settled.","9/16 is not a fraction","BUST — one of you is cooking the books","bought a memecoin, received a memo","the LP has no withdraw path. neither do we.","every 16 September. forever.","read the contract. we'll wait.","see you on the sixteenth."];
   var html='';for(var r=0;r<2;r++){lines.forEach(function(l){html+='<span><b>/</b> '+l+'</span>';});}
   document.getElementById('mqt').innerHTML=html;
 
@@ -753,6 +758,19 @@ footer .fine{font-family:var(--fm);font-size:11px;line-height:2;color:var(--mute
     mk.addEventListener('click',function(){
       if(++taps<3)return;taps=0;egg.classList.add('on');
       setTimeout(function(){egg.classList.remove('on');},1500);});}
+
+  var CA='0x96690bb2234439ae690138a6ac0bae1cdc03329e';
+  function copyCA(el,label){
+    if(!navigator.clipboard) return;
+    navigator.clipboard.writeText(CA).then(function(){
+      var old=el.innerHTML; el.innerHTML=label||'Copied';
+      setTimeout(function(){ el.innerHTML=old; },1600);
+    });
+  }
+  var hca=document.getElementById('heroca');
+  if(hca) hca.addEventListener('click',function(){copyCA(hca,'CA <b>copied</b>');});
+  var cca=document.getElementById('copyca');
+  if(cca) cca.addEventListener('click',function(){copyCA(cca,'Copied');});
 
   var tabs=document.querySelectorAll('.tabs button');
   tabs.forEach(function(btn){
